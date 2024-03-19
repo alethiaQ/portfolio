@@ -10,19 +10,19 @@ function App() {
                   "main aboutMeIMG"
                   "testimonials testimonials"
                   "footer footer"`}
-      gridTemplateRows={'80px 750px 650px 100px'}
+      gridTemplateRows={'80px 710px 650px 100px'}
       gridTemplateColumns={'900px 1fr'}
       h='200px'
-      gap='1'
+      // gap='1'
       color='blackAlpha.700'
 
     >
-      <GridItem pl='2' bg='blue.300' area={'header'}>
+      <GridItem pl='2' bg='blue.900' area={'header'}>
         Header
       </GridItem>
       <GridItem pl='2' bg='blue.900' area={'aboutMeIMG'}>
         <Center>
-        <Text className='scale-font' align="center" fontSize="140px" color="white"> About me </Text>
+        <Text className='scale-font' align="center" fontSize="120px" color="white" pt="40"> About me </Text>
         </Center>
      
       </GridItem>
