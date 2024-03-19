@@ -1,42 +1,33 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { Grid, GridItem } from '@chakra-ui/react';
+
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
-  );
+    <Grid
+      templateAreas={`"header header"
+                  "nav main"
+                  "nav footer"`}
+      gridTemplateRows={'100px 1000px 100px'}
+      gridTemplateColumns={'250px 1fr'}
+      h='200px'
+      gap='1'
+      color='blackAlpha.700'
+      fontWeight='bold'
+    >
+      <GridItem pl='2' bg='orange.300' area={'header'}>
+        Header
+      </GridItem>
+      <GridItem pl='2' bg='pink.300' area={'nav'}>
+        Nav
+      </GridItem>
+      <GridItem pl='2' bg='green.300' area={'main'}>
+        Main
+      </GridItem>
+      <GridItem pl='2' bg='blue.300' area={'footer'}>
+        Footer
+      </GridItem>
+    </Grid>)
+
 }
 
 export default App;
