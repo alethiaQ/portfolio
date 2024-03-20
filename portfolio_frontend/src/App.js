@@ -1,7 +1,8 @@
-import { Center, Grid, GridItem, Text, Link, Button, ButtonGroup } from '@chakra-ui/react';
+import { Center, Grid, GridItem, Text } from '@chakra-ui/react';
 import './App.css';
 import AboutMe from './components/AboutMe';
 import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,27 +29,8 @@ function App() {
       </GridItem>
       <AboutMe />
       <Testimonials />
-      <GridItem pl='2' bg='blue.900' area={'footer'}>
-        <Center>
-        <ButtonGroup  variant='ghost' spacing='6'>
-          <Button colorScheme="white" pt="12" >
-            <Text align="center" color="white" className='scale-font'  fontSize="30px">
-              <Link href='https://www.linkedin.com/in/alethia-quintero/' isExternal> LinkedIn </Link>
-            </Text>
-          </Button>
-          <Button colorScheme="white" pt="12">
-            <Text align="center" color="white" className='scale-font'  fontSize="30px">
-              <Link href='https://github.com/alethiaQ?tab=repositories' isExternal> Github </Link>
-            </Text>
-          </Button>
-          <Button colorScheme="white" pt="12">
-            <Text align="center" color="white" className='scale-font' fontSize="30px">
-              <Link href='mailto:alethiaq22@gmail.com?body=Hi, I saw your awesome website!' isExternal> Email </Link>
-            </Text>
-          </Button>
-        </ButtonGroup>
-        </Center>
-       
+      <GridItem bg='blue.900' area={'footer'}>
+        <Footer />
       </GridItem>
     </Grid>
   )
