@@ -17,8 +17,8 @@ function App() {
 
     >
       <GridItem pl='2' bg='blue.900' area={'header'}>
-        <Text className='scale-font' fontSize="40px" color="blue.300" align="center">
-          Alethia Quintero || Full Stack Developer
+        <Text className='scale-font' fontSize="35px" color="blue.300" align="center">
+          Alethia Quintero || Full Stack Developer || Richmond, VA
         </Text>
       </GridItem>
       <GridItem pl='2' bg='blue.900' area={'aboutMeIMG'}>
