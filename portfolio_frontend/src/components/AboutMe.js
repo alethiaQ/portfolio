@@ -10,6 +10,7 @@ import {
     ModalBody,
     ModalCloseButton,
 } from '@chakra-ui/react'
+import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 import { useDisclosure } from '@chakra-ui/react'
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 function AboutMe() {
@@ -39,11 +40,14 @@ function AboutMe() {
                         <Button variant='outline' colorScheme='blue' onClick={onOpen}>
                             Resume
                         </Button>
-                        <Modal isOpen={isOpen} onClose={onClose} size='full'>
+                        <Modal isOpen={isOpen} onClose={onClose} size='full' bg="blue.300">
                             <ModalOverlay />
                             <ModalContent>
                                 <ModalHeader>
                                     <Text className="scale-font" fontSize="55px" color="blue.900"> Resume
+                                    </Text>
+                                    <Text className="scale-font" color="blue.300">
+                                        (Email me for a copy!)
                                     </Text>
                                 </ModalHeader>
                                 <ModalCloseButton />
