@@ -1,4 +1,4 @@
-import { Box, Center, CardHeader, GridItem, Card, CardBody, Heading, Text, CardFooter, Button } from '@chakra-ui/react';
+import { Box, Center, CardHeader, GridItem, Card, CardBody, Text, CardFooter } from '@chakra-ui/react';
 import '../App.css';
 function Testimonials() {
 

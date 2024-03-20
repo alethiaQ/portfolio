@@ -1,4 +1,4 @@
-import { Center, Grid, GridItem, Text } from '@chakra-ui/react';
+import { Center, Grid, GridItem, Text, Link, Button, ButtonGroup } from '@chakra-ui/react';
 import './App.css';
 import AboutMe from './components/AboutMe';
 import Testimonials from './components/Testimonials';
@@ -10,7 +10,7 @@ function App() {
                   "main aboutMeIMG"
                   "testimonials testimonials"
                   "footer footer"`}
-      gridTemplateRows={'85px 710px 650px 100px'}
+      gridTemplateRows={'85px 710px 650px 105px'}
       gridTemplateColumns={'900px 1fr'}
       h='200px'
       color='blackAlpha.700'
@@ -29,7 +29,26 @@ function App() {
       <AboutMe />
       <Testimonials />
       <GridItem pl='2' bg='blue.900' area={'footer'}>
-        Footer
+        <Center>
+        <ButtonGroup  variant='ghost' spacing='6'>
+          <Button colorScheme="white" pt="12" >
+            <Text align="center" color="white" className='scale-font'  fontSize="30px">
+              <Link href='https://www.linkedin.com/in/alethia-quintero/' isExternal> LinkedIn </Link>
+            </Text>
+          </Button>
+          <Button colorScheme="white" pt="12">
+            <Text align="center" color="white" className='scale-font'  fontSize="30px">
+              <Link href='https://github.com/alethiaQ?tab=repositories' isExternal> Github </Link>
+            </Text>
+          </Button>
+          <Button colorScheme="white" pt="12">
+            <Text align="center" color="white" className='scale-font' fontSize="30px">
+              <Link href='mailto:alethiaq22@gmail.com?body=Hi, I saw your awesome website!' isExternal> Email </Link>
+            </Text>
+          </Button>
+        </ButtonGroup>
+        </Center>
+       
       </GridItem>
     </Grid>
   )
