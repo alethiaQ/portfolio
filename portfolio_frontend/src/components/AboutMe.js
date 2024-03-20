@@ -1,4 +1,5 @@
-import { Box, Center, CardHeader, Grid, GridItem, Stack, Image, Card, CardBody, Heading, Text, CardFooter, Button, Code } from '@chakra-ui/react';
+import { GridItem, Stack, Image, Card, CardBody, Heading, CardFooter, Button, Code, Link } from '@chakra-ui/react';
+
 function AboutMe() {
     return (
         <GridItem pl='2' area={'main'}>
@@ -11,18 +12,16 @@ function AboutMe() {
                 <Image
                     objectFit='cover'
                     maxW={{ base: '100%', sm: '200px' }}
-                    src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-                    alt='Caffe Latte'
+                    src='headshotOpt.jpeg'
+                    alt='Headshot'
                 />
-
                 <Stack>
                     <CardBody>
-                        <Heading size='md'>Hello!</Heading>
+                        <Heading size='md'>Welcome</Heading>
                         <Code>
-                            Thanks for peaking at my page, I'll get straight to the point. I'm a fullstack developer with expertise in React, Angular, Java and Ruby on Rails, to name a few. I've worked professionally for 4 years as a software developer building large scale applications end to end. I also spent those 4 years in a hybrid environment, where a portion of my time was dedicated to DevOps work. So, I have the ability to thrive in high-stress environments and simultaneously build and design clean, moduler, and scalabe applications that fit the needs of users, easy to maintain, and frankly, are nice to look at. Please check out my resume for a bit more!
+                            First of all, thanks for checking out my page! I'll get straight to the point. I'm a fullstack developer with expertise in React, Angular, Java and Ruby on Rails, to name a few. I've worked professionally for 4 years as a software developer building large scale applications end to end. I also spent those 4 years in a hybrid environment, where a portion of my time was dedicated to DevOps work. So, I have the ability to thrive in high-stress environments and simultaneously build and design clean, moduler, and scalabe applications that fit the needs of users, are easy to maintain, and frankly, are nice to look at. Please check out my resume for a bit more!
                         </Code>
                     </CardBody>
-
                     <CardFooter>
                         <Button variant='outline' colorScheme='blue'>
                             Resume
@@ -39,8 +38,8 @@ function AboutMe() {
                 <Image
                     objectFit='cover'
                     maxW={{ base: '100%', sm: '200px' }}
-                    src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-                    alt='Caffe Latte'
+                    src='blue_lorax.jpeg'
+                    alt='Lorax Icon'
                 />
 
                 <Stack>
@@ -54,7 +53,9 @@ function AboutMe() {
 
                     <CardFooter>
                         <Button variant='outline' colorScheme='blue'>
-                            Github
+                            <Link href='https://github.com/alethiaQ?tab=repositories' isExternal>
+                                Github
+                            </Link>
                         </Button>
                     </CardFooter>
                 </Stack>

@@ -1,4 +1,4 @@
-import { Box, Center, CardHeader, Grid, GridItem, Stack, Image, Card, CardBody, Heading, Text, CardFooter, Button, Code } from '@chakra-ui/react';
+import { Center, Grid, GridItem, Text } from '@chakra-ui/react';
 import './App.css';
 import AboutMe from './components/AboutMe';
 import Testimonials from './components/Testimonials';
@@ -10,28 +10,29 @@ function App() {
                   "main aboutMeIMG"
                   "testimonials testimonials"
                   "footer footer"`}
-      gridTemplateRows={'80px 710px 650px 100px'}
+      gridTemplateRows={'85px 710px 650px 100px'}
       gridTemplateColumns={'900px 1fr'}
       h='200px'
-      // gap='1'
       color='blackAlpha.700'
 
     >
       <GridItem pl='2' bg='blue.900' area={'header'}>
-        Header
+        <Text className='scale-font' fontSize="40px" color="blue.300" align="center">
+          Alethia Quintero || Full Stack Developer
+        </Text>
       </GridItem>
       <GridItem pl='2' bg='blue.900' area={'aboutMeIMG'}>
         <Center>
-        <Text className='scale-font' align="center" fontSize="120px" color="white" pt="40"> About me </Text>
+          <Text className='scale-font' align="center" fontSize="120px" color="white" pt="40"> About me </Text>
         </Center>
-     
       </GridItem>
       <AboutMe />
       <Testimonials />
       <GridItem pl='2' bg='blue.900' area={'footer'}>
         Footer
       </GridItem>
-    </Grid>)
+    </Grid>
+  )
 
 }
 
