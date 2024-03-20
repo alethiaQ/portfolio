@@ -43,14 +43,14 @@ function AboutMe() {
                             <ModalOverlay />
                             <ModalContent>
                                 <ModalHeader>
-                                    <Text className="scale-font" fontSize="45px"> Resume
+                                    <Text className="scale-font" fontSize="55px" color="blue.900"> Resume
                                     </Text>
                                 </ModalHeader>
                                 <ModalCloseButton />
                                 <ModalBody>
                                     <Center>
                                         <Document file="AlethiaQuintero_Resume.pdf" onLoadError={console.error} style={{ width: '100vw', height: 'auto' }}>
-                                            <Page pageIndex={0} />
+                                            <Page pageNumber={1} renderTextLayer={false} />
                                         </Document>
                                     </Center>
 
