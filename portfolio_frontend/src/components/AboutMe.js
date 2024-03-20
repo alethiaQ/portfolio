@@ -1,6 +1,19 @@
-import { GridItem, Stack, Image, Card, CardBody, Heading, CardFooter, Button, Code, Link } from '@chakra-ui/react';
-
+import { GridItem, Stack, Image, Card, CardBody, Heading, CardFooter, Button, Code, Link, Text, Center, AbsoluteCenter } from '@chakra-ui/react';
+import { pdfjs } from 'react-pdf';
+import { Document, Page } from 'react-pdf';
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+} from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 function AboutMe() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <GridItem pl='2' area={'main'}>
             <Card
@@ -23,9 +36,27 @@ function AboutMe() {
                         </Code>
                     </CardBody>
                     <CardFooter>
-                        <Button variant='outline' colorScheme='blue'>
+                        <Button variant='outline' colorScheme='blue' onClick={onOpen}>
                             Resume
                         </Button>
+                        <Modal isOpen={isOpen} onClose={onClose} size='full'>
+                            <ModalOverlay />
+                            <ModalContent>
+                                <ModalHeader>
+                                    <Text className="scale-font" fontSize="45px"> Resume
+                                    </Text>
+                                </ModalHeader>
+                                <ModalCloseButton />
+                                <ModalBody>
+                                    <Center>
+                                        <Document file="AlethiaQuintero_Resume.pdf" onLoadError={console.error} style={{ width: '100vw', height: 'auto' }}>
+                                            <Page pageIndex={0} />
+                                        </Document>
+                                    </Center>
+
+                                </ModalBody>
+                            </ModalContent>
+                        </Modal>
                     </CardFooter>
                 </Stack>
             </Card>
