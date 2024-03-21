@@ -3,8 +3,8 @@ import '../App.css';
 function Testimonials() {
 
     return (
-        <Box p={[2,2,12]} >
-            <Card 
+        <Box p={[2, 2, 12]} >
+            <Card
                 overflow='hidden'
                 variant='outline elevated'
                 py='2'

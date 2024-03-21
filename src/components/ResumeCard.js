@@ -24,9 +24,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 function ResumeCard() {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const aboutMeBlurb = `First of all, thanks for checking out my page! I'll get straight to the point. I'm a fullstack developer with expertise in React, Angular, Java and Ruby on Rails, to name a few. I've worked professionally for 4 years as a software developer building large scale applications end to end. I also spent those 4 years in a hybrid environment, where a portion of my time was dedicated to DevOps work. So, I have the ability to thrive in high-stress environments and simultaneously build and design clean, moduler, and scalabe applications that fit the needs of users, are easy to maintain, and frankly, are nice to look at. Please check out my resume for a bit more!`;
     return (
         <Card
-        direction={{ base: 'column', sm: 'column', md: 'row', lg: 'row' }}
+            direction={{ base: 'column', sm: 'column', md: 'row', lg: 'row' }}
             overflow='wrap'
             variant='outline elevated'
             p='2'
@@ -41,7 +42,7 @@ function ResumeCard() {
                 <CardBody>
                     <Heading size='md'>Welcome</Heading>
                     <Code>
-                        First of all, thanks for checking out my page! I'll get straight to the point. I'm a fullstack developer with expertise in React, Angular, Java and Ruby on Rails, to name a few. I've worked professionally for 4 years as a software developer building large scale applications end to end. I also spent those 4 years in a hybrid environment, where a portion of my time was dedicated to DevOps work. So, I have the ability to thrive in high-stress environments and simultaneously build and design clean, moduler, and scalabe applications that fit the needs of users, are easy to maintain, and frankly, are nice to look at. Please check out my resume for a bit more!
+                        {aboutMeBlurb}
                     </Code>
                 </CardBody>
                 <CardFooter>

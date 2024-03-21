@@ -5,29 +5,27 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
 function App() {
+  const baseTempAreas = `"header" "aboutMeIMG" "main" "testimonials" "footer"`;
+  const mdTempAreas = `"header header" "main aboutMeIMG" "testimonials testimonials" "footer footer"`;
+  const headerText = "Alethia Quintero || Full Stack Developer || Richmond, VA";
   return (
     <Grid
-      templateAreas={{
-        base: `"header" "aboutMeIMG" "main" "testimonials" "footer"`,
-        md:`"header header"
-      "main aboutMeIMG"
-      "testimonials testimonials"
-      "footer footer"`}}
-      gridTemplateRows={{base: '1fr 2fr 6fr 6fr 4fr', md:'85px 710px 650px 105px'}}
-      gridTemplateColumns={{base: '4fr', md:'2fr 1fr'}}
+      templateAreas={{ base: baseTempAreas, md: mdTempAreas}}
+      gridTemplateRows={{ base: '1fr 2fr 6fr 6fr 4fr', md: '85px 710px 650px 105px' }}
+      gridTemplateColumns={{ base: '4fr', md: '2fr 1fr' }}
       h='200px'
       color='blackAlpha.700'
 
     >
       <GridItem pl='2' bg='blue.900' area={'header'}>
         <Text className='scale-font' fontSize={{ base: "24px", md: "30px", lg: "40px" }} color="blue.300" align="center">
-          Alethia Quintero || Full Stack Developer || Richmond, VA
+          {headerText}
         </Text>
       </GridItem>
       <AboutMe />
       <GridItem pl='2' bg='blue.900' area={'aboutMeIMG'}>
         <Center>
-          <Text className='scale-font' align="center" fontSize={{ base: "40px", md: "80px", lg: "120px" }} color="white" pt={{base: 4, md:40}}> About me </Text>
+          <Text className='scale-font' align="center" fontSize={{ base: "40px", md: "80px", lg: "120px" }} color="white" pt={{ base: 4, md: 40 }}> About me </Text>
         </Center>
       </GridItem>
 
