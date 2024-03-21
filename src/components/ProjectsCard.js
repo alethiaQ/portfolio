@@ -3,14 +3,14 @@ function ProjectsCard() {
 
     return (
         <Card
-            direction={{ base: 'column', sm: 'row' }}
-            overflow='hidden'
+        direction={{ base: 'column', sm: 'column', md: 'row', lg: 'row' }}
+        overflow='wrap'
             variant='outline elevated'
-            py='2'
+            p='2'
         >
             <Image
                 objectFit='cover'
-                maxW={{ base: '100%', sm: '200px' }}
+                maxW={{ base: '100%', sm: '100%', md: '200px' }}
                 src='blue_lorax.jpeg'
                 alt='Lorax Icon'
             />
